@@ -5,7 +5,8 @@ createApp({
     data() {
         return {
             books,
-            cart: []
+            cart: [],
+            genre: ""
         }
     },
     methods: {
@@ -26,6 +27,22 @@ createApp({
                 bookCart.soldout = !bookCart.soldout;
             }
         },
+    },
+    computed: {
+        filteredBooks() {
+            return this.books.filter((el) => {
+                if (this.genre === "All") {
+                    return true
+                } else if (this.genre === "fantasy"){
+                    el.genre === "Fantasy"
+                } else if (this.genre === "romantic"){
+                    el.genre === "Romantic Novel"
+                } else {
+                    el.genre === "Science Fiction"
+                }
+            })
+        }
+
     },
     mounted() {
         console.log(books)

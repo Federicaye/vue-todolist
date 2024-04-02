@@ -18,8 +18,14 @@
 <body>
 
     <div id="app">
-        <header class="d-flex justify-content-center bg-body-secondary ">
+        <header class="d-flex justify-content-between bg-body-secondary ">
             <h1>Books</h1>
+            <select name="" id="" v-model="genre">
+                <option value="All">All genre</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="romantic">Romantic Novel</option>
+                <option value="science">Science Fiction</option>
+            </select>
         </header>
         <main class="container">
             <section class=" row ">
@@ -31,7 +37,7 @@
                                 <h5 class="card-title">{{book.title}}</h5>
                                 <p class="card-text"> {{book.genre}}
                                 </p>
-                                <p v-if="book.soldout">Sold out</p>
+                                <p v-if="book.soldout" class="soldout">Sold out</p>
                                 <button class="btn btn-primary" @click.prevent="addToCart(book.id)"> add to
                                     cart</button>
                             </div>
@@ -39,9 +45,10 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <h3>Cart</h3>
+                    <div class="d-flex align-items-center"><h3 class="me-2 ">Cart</h3><i class="fa-solid fa-cart-shopping"></i></div>
+                    
                     <ul>
-                        <li v-for="(book,index) in cart" class="d-flex align-item-center">
+                        <li v-for="(book,index) in cart" class="d-flex align-items-center">
                             <div>
                                 <h5>{{book.title}}</h5>
                                 <p>{{book.genre}}</p>
