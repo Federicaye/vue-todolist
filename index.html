@@ -15,19 +15,36 @@
 </head>
 
 <body>
-   
+
     <div id="app">
-        <main class="d-flex flex-wrap container ">
-            <div class="card m-2 " style="width: 18rem;" v-for="(book, index) in books">
-                <img :src="book.img" class="card-img-top" :alt="book.title">
-                <div class="card-body">
-                    <h5 class="card-title">{{book.title}}</h5>
-                    <p class="card-text"> {{book.genre}}
-                    </p>
-                    <p v-if="book.soldout">Sold out</p>
-                    <button class="btn btn-primary" @click.prevent="addToCart(book.id)"> add to cart</button>
+        <main class="container ">
+            <section class=" row ">
+                <div class="col-11 ">
+                    <div class="d-flex flex-wrap">
+                        <div class="card m-2 " style="width: 18rem;" v-for="(book, index) in books">
+                            <img :src="book.img" class="card-img-top" :alt="book.title">
+                            <div class="card-body">
+                                <h5 class="card-title">{{book.title}}</h5>
+                                <p class="card-text"> {{book.genre}}
+                                </p>
+                                <p v-if="book.soldout">Sold out</p>
+                                <button class="btn btn-primary" @click.prevent="addToCart(book.id)"> add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="col-2">
+                    <ul>
+                        <li v-for="(book,index) in cart">
+                            <h5>{{book.title}}</h5>
+                            <p>{{book.genre}}</p>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </section>
+            
         </main>
     </div>
 </body>

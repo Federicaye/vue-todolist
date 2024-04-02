@@ -14,7 +14,8 @@ createApp({
             const item = this.books.find((el) => { return el.id === id });
             item.soldout = !item.soldout;
             this.cart.push(item);
-            console.log(this.cart)
+            console.log(this.cart);
+            console.log(item)
 
         },
     },
