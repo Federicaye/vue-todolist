@@ -18,6 +18,12 @@ createApp({
             console.log(item)
 
         },
+        removeItem(id) {
+            const i = this.cart.findIndex((el) => el.id === id);
+            if (i !== -1) {
+                this.cart.splice(i, 1);
+            }
+        },
     },
     mounted() {
         console.log(books)
