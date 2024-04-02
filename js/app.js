@@ -34,11 +34,11 @@ createApp({
                 if (this.genre === "All") {
                     return true
                 } else if (this.genre === "fantasy"){
-                    el.genre === "Fantasy"
+                  return  el.genre === "Fantasy"
                 } else if (this.genre === "romantic"){
-                    el.genre === "Romantic Novel"
+                  return  el.genre === "Romantic Novel"
                 } else {
-                    el.genre === "Science Fiction"
+                  return  el.genre === "Science Fiction"
                 }
             })
         }

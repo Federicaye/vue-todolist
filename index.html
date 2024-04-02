@@ -31,7 +31,7 @@
             <section class=" row ">
                 <div class="col-10 ">
                     <div class="d-flex flex-wrap">
-                        <div class="card m-2 " style="width: 18rem;" v-for="(book, index) in books">
+                        <div class="card m-2 " style="width: 18rem;" v-for="(book, index) in filteredBooks">
                             <img :src="book.img" class="card-img-top" :alt="book.title">
                             <div class="card-body">
                                 <h5 class="card-title">{{book.title}}</h5>
