@@ -25,7 +25,7 @@
                     <p class="card-text"> {{book.genre}}
                     </p>
                     <p v-if="book.soldout">Sold out</p>
-                    <a href="" class="btn btn-primary" @click.prevent="addToCart(item.id)">add to cart</a>
+                    <button class="btn btn-primary" @click.prevent="addToCart(book.id)"> add to cart</button>
                 </div>
             </div>
         </main>

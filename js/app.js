@@ -8,8 +8,8 @@ createApp({
         }
     },
     methods: {
-        addToChart(event, id){
-            event.preventDefault();
+        addToCart(id){
+            /* event.preventDefault(); */
             const item = this.books.find((el) => { return el.id === id });
             item.soldout = !item.soldout;
 
