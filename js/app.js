@@ -9,7 +9,7 @@ createApp({
         }
     },
     methods: {
-        addToCart(id){
+        addToCart(id) {
             /* event.preventDefault(); */
             const item = this.books.find((el) => { return el.id === id });
             item.soldout = !item.soldout;
@@ -20,8 +20,10 @@ createApp({
         },
         removeItem(id) {
             const i = this.cart.findIndex((el) => el.id === id);
+            const bookCart = this.books.find((el) => { return el.id === id });
             if (i !== -1) {
                 this.cart.splice(i, 1);
+                bookCart.soldout = !bookCart.soldout;
             }
         },
     },
