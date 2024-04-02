@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             books,
+            cart: []
         }
     },
     methods: {
@@ -12,6 +13,8 @@ createApp({
             /* event.preventDefault(); */
             const item = this.books.find((el) => { return el.id === id });
             item.soldout = !item.soldout;
+            this.cart.push(item);
+            console.log(this.cart)
 
         },
     },
