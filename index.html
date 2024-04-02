@@ -18,10 +18,14 @@
 <body>
 
     <div id="app">
-        <header class="d-flex justify-content-between bg-body-secondary ">
+        <header class="d-flex justify-content-between bg-body-secondary align-items-center ">
             <h1>Books</h1>
+            <div>
+                <input type="text" v-model="itemTitle">
+                <button @click="sellBook">SELL</button>
+            </div>
             <select name="" id="" v-model="genre">
-                <option value="All">All genre</option>
+                <option value="All" selected>All genre</option>
                 <option value="fantasy">Fantasy</option>
                 <option value="romantic">Romantic Novel</option>
                 <option value="science">Science Fiction</option>
@@ -45,8 +49,10 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="d-flex align-items-center"><h3 class="me-2 ">Cart</h3><i class="fa-solid fa-cart-shopping"></i></div>
-                    
+                    <div class="d-flex align-items-center">
+                        <h3 class="me-2 ">Cart</h3><i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
                     <ul>
                         <li v-for="(book,index) in cart" class="d-flex align-items-center">
                             <div>

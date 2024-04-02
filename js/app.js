@@ -6,7 +6,8 @@ createApp({
         return {
             books,
             cart: [],
-            genre: ""
+            genre: "",
+            itemTitle: ""
         }
     },
     methods: {
@@ -27,18 +28,34 @@ createApp({
                 bookCart.soldout = !bookCart.soldout;
             }
         },
+        sellBook() {
+            const newBook = {
+                id: null,
+                title: this.itemTitle,
+                genre: '',
+                img: 'img/book.jpg',
+                soldout: false
+            }
+            this.books.push(newBook);
+            let nextId = 0;
+            this.books.forEach((el) => {
+                if (nextId < el.id) {
+                    nextId = el.id
+                }
+            })
+        }
     },
     computed: {
         filteredBooks() {
             return this.books.filter((el) => {
                 if (this.genre === "All") {
                     return true
-                } else if (this.genre === "fantasy"){
-                  return  el.genre === "Fantasy"
-                } else if (this.genre === "romantic"){
-                  return  el.genre === "Romantic Novel"
+                } else if (this.genre === "fantasy") {
+                    return el.genre === "Fantasy"
+                } else if (this.genre === "romantic") {
+                    return el.genre === "Romantic Novel"
                 } else {
-                  return  el.genre === "Science Fiction"
+                    return el.genre === "Science Fiction"
                 }
             })
         }
