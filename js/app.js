@@ -43,6 +43,7 @@ createApp({
                     nextId = el.id
                 }
             })
+            newBook.id = nextId;
         }
     },
     computed: {
