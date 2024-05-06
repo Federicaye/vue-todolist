@@ -20,13 +20,13 @@
 
     <div id="app">
         <header class="d-flex justify-content-between align-items-center ">
-            <h1>Books</h1>
-            <div class="d-flex align-items-center">
+            <h1 class="p-2">Used books</h1>
+           <!--  <div class="d-flex align-items-center">
                 <p>sell a used book</p>
                 <input type="text" v-model="itemTitle">
                 <button @click="sellBook">SELL</button>
-            </div>
-            <select name="" id="" v-model="genre">
+            </div> -->
+            <select name="" id="" v-model="genre" class="p-2 me-2 ">
                 <option value="All">All genre</option>
                 <option value="fantasy">Fantasy</option>
                 <option value="romantic">Romantic Novel</option>
