@@ -53,7 +53,7 @@ createApp({
     computed: {
         filteredBooks() {
             return this.books.filter((el) => {
-                if (this.genre === "All") {
+                if (this.genre === "All" || !this.genre) {
                     return true
                 } else if (this.genre === "fantasy") {
                     return el.genre === "Fantasy"

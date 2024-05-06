@@ -27,7 +27,7 @@
                 <button @click="sellBook">SELL</button>
             </div>
             <select name="" id="" v-model="genre">
-                <option value="All" selected>All genre</option>
+                <option value="All">All genre</option>
                 <option value="fantasy">Fantasy</option>
                 <option value="romantic">Romantic Novel</option>
                 <option value="science">Science Fiction</option>
