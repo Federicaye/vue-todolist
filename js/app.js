@@ -1,10 +1,8 @@
-import { books } from "./data.js"
-
 const { createApp } = Vue;
 createApp({
     data() {
         return {
-            books,
+            books: [],
             cart: [],
             genre: "",
             itemTitle: ""
@@ -44,6 +42,12 @@ createApp({
                 }
             })
             newBook.id = nextId;
+        },
+        getData() {
+            axios.get('server.php').then((res)=> {
+                this.books = res.data;
+                console.log(this.books);
+            })
         }
     },
     computed: {
@@ -63,6 +67,6 @@ createApp({
 
     },
     mounted() {
-        console.log(books)
+       this.getData();
     }
 }).mount('#app')

@@ -10,6 +10,7 @@
         crossorigin='anonymous' referrerpolicy='no-referrer' />
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'
         integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+        <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <script src="js/app.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
